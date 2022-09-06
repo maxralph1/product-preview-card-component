@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+ --dark-cyan: hsl(158, 36%, 37%);
+ --dark-cyan-hover: hsl(157, 54%, 22%);
+ --cream: hsl(30, 38%, 92%);
+ --very-dark-blue: hsl(212, 21%, 14%);
+ --dark-grayish-blue: hsl(228, 12%, 48%);
+ --white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ background-color: var(--cream);
+ font-family: 'Montserrat', sans-serif;
+}
+
+.product {
+ width: 90%;
+ margin: 3em auto;
+ background-color: var(--white);
+ display: flex;
+ flex-direction: column;
+ max-width: 350px;
+ min-width: 350px;
+ border-radius: 10px;
+}
+
+.product .product-image img {
+ width: 100%;
+ border-radius: 10px 10px 0 0;
+}
+
+.product .product-description {
+ margin: 1.2em 1.5em 1em;
+}
+
+.product .product-description .intro {
+ display: flex;
+ flex-direction: column;
+}
+
+.product .product-description .intro h1 {
+ font-family: 'Fraunces', serif;
+ font-size: 1.85rem;
+ line-height: 1;
+ margin-top: 0.35em;
+ margin-bottom: 0.5em;
+ order: 2;
+}
+
+.product .product-description .intro p {
+ text-transform: uppercase;
+ letter-spacing: 0.35rem;
+ font-size: 0.75rem;
+ order: 1;
+}
+
+.product .product-description .intro p+p {
+ text-transform: unset;
+ letter-spacing: unset;
+ font-size: 0.8rem;
+ line-height: 1.65;
+ order: 3;
+}
+
+.product .product-description .pricing {
+ display: flex;
+ align-items: center;
+ gap: 1em;
+ margin: 1em 0 0.45em;
+}
+
+.product .product-description .pricing p {
+ font-family: 'Fraunces', serif;
+ font-size: 2rem;
+ color: var(--dark-cyan);
+}
+
+.product .product-description .pricing p+p {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 0.85rem;
+ text-decoration: line-through;
+ color: var(--very-dark-blue);
+}
+
+.product .product-description .cta {
+ /* width: 80%; */
+ margin: 1em auto 0.5em;
+ padding: 0.75em 0;
+ background-color: var(--dark-cyan);
+ border-radius: 7px;
+ display: flex;
+ justify-content: center;
+ gap: 0.5em;
+ transition: background-color 0.75s ease-in-out;
+}
+
+.product .product-description .cta:hover,
+.product .product-description .cta:focus {
+ background-color: var(--dark-cyan-hover);
+}
+
+.product .product-description .cta a {
+ text-align: center;
+ text-decoration: none;
+ color: var(--white);
+ font-size: 0.85rem;
+}
+
+
+/* frontendmentor.io attribution */
+
+.attribution {
+ font-size: 11px; 
+ text-align: center;
+ margin: 0 auto;
+}
+
+.attribution a {
+ color: hsl(228, 45%, 44%);
+}
+
+
+/* 
+@media screen and (min-width: 375px) {
+ 
+} */
+
+
+@media screen and (min-width: 800px) {
+ .product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 550px;
+  min-width: 550px;
+ }
+
+ .product .product-image img {
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+ }
+
+ .product .product-description {
+  margin: 1.85em 1.5em 1em;
+ }
+
+ .product .product-description .intro h1 {
+  margin-top: 0.5em;
+  margin-bottom: 0.65em;
+ }
+
+ .product .product-description .intro p+p {
+  line-height: 1.75;
+ }
+
+ .product .product-description .pricing {
+  margin-bottom: 1.5em;
+ }
+
+ .product .product-description .cta {
+  margin-bottom: unset;
+  padding: 1em 0;
+ }
+}
+
+/* 
+@media screen and (min-width: 1440px) {
+ 
+} */
